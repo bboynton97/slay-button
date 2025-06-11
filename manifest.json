@@ -9,5 +9,11 @@
       "js": ["content.js"]
     }
   ],
-  "permissions": []
+  "permissions": [],
+  "web_accessible_resources": [
+    {
+      "resources": ["slay-config.json"],
+      "matches": ["<all_urls>"]
+    }
+  ]
 } 
