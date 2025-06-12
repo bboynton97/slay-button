@@ -11,8 +11,8 @@ a chrome extension that modifies commonly buttons on websites to simply say "sla
 4. fit check in pr (bonus points)
 
 ## Examples
-![](google-slay.png)
+![](assets/img/google-slay.png)
 
-![](github-slay.png)
+![](assets/img/github-slay.png)
 
-![](flights-slay.png)
+![](assets/img/flights-slay.png)
