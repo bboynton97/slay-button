@@ -9,3 +9,7 @@ a chrome extension that modifies commonly buttons on websites to simply say "sla
 3. add either a string (used in `document.querySelectAll()`) or an anonymous function that returns an html element
 3. raise a pr
 4. fit check in pr (bonus points)
+
+## Examples
+![](google-slay.png)
+![](github-slay.png)
