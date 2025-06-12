@@ -12,4 +12,7 @@ a chrome extension that modifies commonly buttons on websites to simply say "sla
 
 ## Examples
 ![](google-slay.png)
+
 ![](github-slay.png)
+
+![](flights-slay.png)

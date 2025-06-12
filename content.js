@@ -9,8 +9,13 @@ const slayConfig = {
         }
     ],
     "google.com": [
-        "input[value=\"Google Search\"]"
-    ]
+        "input[value=\"Google Search\"]",
+        (document) => {
+            return Array.from(document.querySelectorAll('span')).find(
+                el => el.textContent.trim() === 'Search'
+            );
+        }
+    ],
 }
 
 const hostname = window.location.hostname.replace(/^www\./, '');
