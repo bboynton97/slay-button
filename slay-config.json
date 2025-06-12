@@ -1,8 +1,0 @@
-{
-  "github.com": [
-    "button[data-variant='primary'] span[data-component='text']"
-  ],
-  "google.com": [
-    "input[value=\"Google Search\"]"
-  ]
-} 
