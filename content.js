@@ -1,22 +1,28 @@
-// Fetch the config and slay the buttons based on domain and selectors
-fetch(chrome.runtime.getURL('slay-config.json'))
-  .then(response => response.json())
-  .then(config => {
-    const hostname = window.location.hostname.replace(/^www\./, '');
+import config from './slay-config.js';
+
+const hostname = window.location.hostname.replace(/^www\./, '');
+const rules = config[hostname];
+
+if (rules && Array.isArray(rules)) {
     console.log(`patching for '${hostname}'`);
-    const selectors = config[hostname];
-    if (selectors && Array.isArray(selectors)) {
-      selectors.forEach(selector => {
-        console.log(`patching '${selector}'`);
-        document.querySelectorAll(selector).forEach(el => {
-          console.log(el);
-          el.textContent = 'slay';
-          el.value = 'slay';
-          el.innerHTML = 'slay';
-        });
-      });
+  rules.forEach(rule => {
+    let elements = [];
+    if (typeof rule === 'string') {
+      console.log(`patching '${rule}'`);
+      elements = document.querySelectorAll(rule);
+    } else if (typeof rule === 'function') {
+      console.log(`patching '${rule}'`);
+      const result = rule(document);
+      if (Array.isArray(result)) {
+        console.log(result);
+        elements = result;
+      } else if (result) {
+        console.log(result);
+        elements = [result];
+      }
     }
-  })
-  .catch(err => {
-    console.error('Failed to load slay-config.json', err);
-  }); 
+    elements.forEach(el => {
+      if (el) el.textContent = 'slay';
+    });
+  });
+} 
