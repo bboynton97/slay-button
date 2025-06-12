@@ -16,5 +16,11 @@
       "resources": ["slay-config.json"],
       "matches": ["<all_urls>"]
     }
-  ]
+  ],
+  "icons": {
+    "16": "assets/icons/slay-icon-16.png",
+    "32": "assets/icons/slay-icon-32.png",
+    "48": "assets/icons/slay-icon-48.png",
+    "128": "assets/icons/slay-icon-128.png"
+  }
 } 

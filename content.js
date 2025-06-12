@@ -1,6 +1,5 @@
 const slayConfig = {
     "github.com": [
-        "span[data-component=\"buttonContent\"]",
         async (document) => {
             await new Promise(resolve => setTimeout(resolve, 1000)); // wait for the page to load
             return Array.from(document.querySelectorAll('span')).find(span => 
