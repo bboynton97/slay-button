@@ -15,6 +15,21 @@ const slayConfig = {
             );
         }
     ],
+    "x.com": [
+        // '[data-testid="SideNav_NewTweet_Button"] span span span:contains("Post")',
+        (document) => { // not working
+            const button = document.querySelector('[data-testid="SideNav_NewTweet_Button"]');
+            if (!button) return null;
+            
+            const spans = button.querySelectorAll('span');
+            for (const span of spans) {
+                if (span.textContent.trim() === 'Post') {
+                    return span;
+                }
+            }
+            return null;
+        }
+    ]
 }
 
 const hostname = window.location.hostname.replace(/^www\./, '');
