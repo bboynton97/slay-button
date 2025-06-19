@@ -3,6 +3,9 @@ a chrome extension that modifies commonly buttons on websites to simply say "sla
 
 ![](slay.jpg)
 
+## install
+available on the [chrome extension store](https://chromewebstore.google.com/detail/slay-button/djbaiejnfbbmohfocdodgooofmbkedci)
+
 ## add your own slay buttons
 1. fork
 2. add the domain with the button to [slay-config.js](./slay-config.js)
